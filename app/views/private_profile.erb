@@ -1,0 +1,9 @@
+<h1>Private Profile</h1>
+
+<ul>
+  <% @urls.each do |url| %>
+
+  <li><%=url.count%> <%=url.original%> => <a href="/<%=url.shortened%>"><%=url.shortened%></a></li>
+  <% end %>
+  
+</ul>

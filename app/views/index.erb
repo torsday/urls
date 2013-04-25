@@ -1,16 +1,27 @@
+<form class="login" name="login" action="/login" method="post">
+  <input type="email" name="email" value="Email"></input>
+  <input type="password" name="password" value="password"></input>
+  <input type="submit" name="Submit">
+</form>
+
+
+<form class="logout" name="logout" action="/logout" method="post">
+  <input type="submit" value="Logout"></input>
+</form>
+
 <div class="container">
   <h1>Welcome to URL Shortener 1.0</h1>
   <form class="shortener" name="url_input" action="/url" method="post">
     <input type="text" name="original_url" value="http://"></input>
     <input type="submit" name="Submit">
   </form>
+  <div>
+    <form action="/<%= @lucky %>">
+      <input type="submit" value="I'm Feelin' Lucky!">
+    </form>
+  </div>
   <div id="short">
   </div>
 </div>
 
-<div>
-  <form action="/<%= @lucky %>">
-    <input type="submit" value="I'm Feelin' Lucky!">
-  </form>
-</div>
 

@@ -1,5 +1,6 @@
 require 'SecureRandom'
 class Url < ActiveRecord::Base
+  belongs_to :user
   validates :original, :format => {:with => /http:\/\/[a-zA-Z0-9\.]+\.[a-zA-Z]{2,3}/, 
                                    :message => "Not a valid URL"}
   before_create :shorten_url

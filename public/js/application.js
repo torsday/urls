@@ -17,4 +17,26 @@ $(document).ready(function() {
       $('#short').html("Invalid URL")
     });
   });
+
+  $('.login').on('submit',function(e){
+    e.preventDefault();
+
+    $.ajax({
+      type:$(this).attr('method'),
+      url:$(this).attr('action'),
+      data:$(this).serialize()
+    }).done(function(data){
+      $('.container').prepend("<a href='/users/" + data +  "'>User Page</a>")
+    });
+  });
+
+    $('.logout').on('submit',function(e){
+    e.preventDefault();
+
+    $.ajax({
+      type:$(this).attr('method'),
+      url:$(this).attr('action'),
+    }).done(function(data){
+    });
+  });
 });
